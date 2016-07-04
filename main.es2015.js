@@ -11,21 +11,19 @@ export default function promiseToBluebird({types: t}) {
 				path.replaceWith(state.addImport('bluebird', 'default', node.name));
 			},
 
-			MemberExpression: {
-				exit(path, state) {
-					const {node} = path;
-					const obj = node.object;
+			MemberExpression(path, state) {
+				const {node} = path;
+				const obj = node.object;
 
-					if (obj.name !== 'Promise') return;
-					if (!path.isReferenced()) return;
-					if (path.scope.getBindingIdentifier(obj.name)) return;
+				if (obj.name !== 'Promise') return;
+				if (!path.isReferenced()) return;
+				if (path.scope.getBindingIdentifier(obj.name)) return;
 
-					path.replaceWith(t.memberExpression(
-						state.addImport('bluebird', 'default', obj.name),
-						node.property,
-						node.computed
-					));
-				},
+				path.replaceWith(t.memberExpression(
+					state.addImport('bluebird', 'default', obj.name),
+					node.property,
+					node.computed
+				));
 			},
 		},
 	};
