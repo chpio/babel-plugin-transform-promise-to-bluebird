@@ -1,0 +1,3 @@
+extends: sudeti
+rules:
+  no-console: 0
