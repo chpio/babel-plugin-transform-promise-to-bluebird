@@ -1,0 +1,22 @@
+{
+  "name": "babel-plugin-transform-promise-to-bluebird",
+  "version": "0.0.0",
+  "description": "Transforms *Promise* to *bluebird*",
+  "main": "main.es5.js",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0"
+  },
+  "scripts": {
+    "prepublish": "babel main.es2015.js > main.es5.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chpio/babel-plugin-transform-promise-to-bluebird.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chpio/babel-plugin-transform-promise-to-bluebird/issues"
+  },
+  "homepage": "https://github.com/chpio/babel-plugin-transform-promise-to-bluebird#readme"
+}
