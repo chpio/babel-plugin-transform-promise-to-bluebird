@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-promise-to-bluebird",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Transforms *Promise* to *bluebird*",
   "main": "main.es5.js",
   "devDependencies": {
