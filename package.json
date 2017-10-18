@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/chpio/babel-plugin-transform-promise-to-bluebird/issues"
   },
-  "homepage": "https://github.com/chpio/babel-plugin-transform-promise-to-bluebird#readme"
+  "homepage": "https://github.com/chpio/babel-plugin-transform-promise-to-bluebird#readme",
+  "dependencies": {
+    "babel-helper-module-imports": "^7.0.0-0"
+  }
 }
