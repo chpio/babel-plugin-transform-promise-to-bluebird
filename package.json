@@ -7,6 +7,9 @@
     "babel-cli": "^6.10.1",
     "babel-preset-es2015": "^6.9.0"
   },
+  "dependencies": {
+    "babel-helper-module-imports": "^7.0.0-0"
+  },
   "scripts": {
     "prepublish": "babel main.es2015.js --out-file main.es5.js --source-maps"
   },
