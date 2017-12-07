@@ -1,4 +1,4 @@
-import {addNamed} from 'babel-helper-module-imports';
+import {addNamed} from '@babel/helper-module-imports';
 
 export default function promiseToBluebird({types: t}) {
 	return {
