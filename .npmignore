@@ -1,2 +1,3 @@
 *
-!/main.es5.js*
+!/main.cjs.js*
+!/main.mjs.js*
