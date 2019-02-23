@@ -21,24 +21,14 @@ export default function promiseToBluebird({types: t}) {
 				if (!path.isReferenced()) return;
 				if (path.scope.getBindingIdentifier('Promise')) return;
 
-				if (node.computed) {
-					path.replaceWith(
-						t.memberExpression(
-							addNamed(path, 'default', 'bluebird', {nameHint: 'Promise'}),
-							node.property,
-							true
-						)
-					);
-				} else {
-					path.replaceWith(
-						addNamed(
-							path,
-							node.property.name,
-							'bluebird',
-							{nameHint: 'Promise'}
-						)
-					);
-				}
+				path.replaceWith(
+					t.memberExpression(
+						addNamed(path, 'default', 'bluebird', {nameHint: 'Promise'}),
+						node.property,
+						node.computed
+					)
+				);
+
 			},
 		},
 	};
